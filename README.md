@@ -33,9 +33,9 @@ The 'Tiny Contract' and the 2_deploy_contracts.js have already been modified to 
 - __Deploy to Rinkeby__
 ```
 truffle console
-web3.personal.newAccount('verystrongpassword')
+web3.personal.newAccount('')
 web3.eth.getBalance('0x95a94979d86d9c32d1d2ab5ace2dcc8d1b446fa1')
-web3.personal.unlockAccount('0x95a94979d86d9c32d1d2ab5ace2dcc8d1b446fa1', 'verystrongpassword', 15000)
+web3.personal.unlockAccount('0x95a94979d86d9c32d1d2ab5ace2dcc8d1b446fa1', '', 15000)
 ```
 
 - __Get test ether__
