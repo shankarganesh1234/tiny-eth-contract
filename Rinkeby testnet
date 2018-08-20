@@ -1,0 +1,17 @@
+
+web3.personal.newAccount('verystrongpassword')
+0x5e3b184a67285b67ba3577cf9e8eb2c7209366f9
+
+web3.eth.getBalance('0x5e3b184a67285b67ba3577cf9e8eb2c7209366f9')
+
+web3.personal.unlockAccount('0x5e3b184a67285b67ba3577cf9e8eb2c7209366f9', 'verystrongpassword', 15000)
+
+Contract - 0x481053B400252324B9601308d21e602a4e2Bf935
+
+// create
+Tiny.deployed().then(function(contractInstance) {contractInstance.addKv('0x5e3b184a67285b67ba3577cf9e8eb2c7209366f9', '0x4b6167652042756e7368696e204a75747375').then(function(v) {console.log(v)})})
+
+
+// get
+Tiny.deployed().then(function(contractInstance) {contractInstance.getKv('0x5e3b184a67285b67ba3577cf9e8eb2c7209366f9').then(function(v) {console.log(v)})})
+
