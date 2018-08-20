@@ -8,22 +8,24 @@ contract Tiny {
     values - The list of values, which correspond to the addresses
     */
     mapping (address => bytes32) public keyValues;
+    address public key;
 
-    function Tiny(){
+    constructor() public {
 
     }
 
     /*
     Adds a kv pair to the mapping
     */
-    function addKv(address key, bytes32 val) public {
+    function addKv(bytes32 val) public {
+        key = msg.sender;
         keyValues[key] = val;
     }
 
     /*
     Returns the value for this key
     */
-    function getKv(address key) view public returns (bytes32) {
-        return keyValues[key];
+    function getKv(address lookupKey) view public returns (bytes32) {
+        return keyValues[lookupKey];
     }
 }
