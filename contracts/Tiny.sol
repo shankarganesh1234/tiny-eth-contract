@@ -31,7 +31,7 @@ contract Tiny {
     function addKv(string val) external payable {
 
         uint fee = 1 finney;
-        if(msg.value < fee) throw;
+        assert(msg.value >= fee);
 
         key = msg.sender;
         keyValues[key] = val;

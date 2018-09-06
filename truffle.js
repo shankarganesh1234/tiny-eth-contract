@@ -12,7 +12,8 @@ module.exports = {
             host: 'localhost',
             port: 8545,
             network_id: '*',
-            gas: 470000
+            gas: 470000,
+            from: '0xD76500f49C1E24B6F07778c5Ab7c51059C9e0751'
         }
     }
 }
