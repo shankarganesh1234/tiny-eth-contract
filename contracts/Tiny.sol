@@ -10,7 +10,6 @@ contract Tiny {
     mapping (address => string) keyValues;
     address key;
     address private owner_;
-    uint earning;
 
     constructor() public {
         owner_ = msg.sender;
@@ -35,8 +34,6 @@ contract Tiny {
 
         key = msg.sender;
         keyValues[key] = val;
-
-        earning += msg.value;
     }
 
     /*
@@ -50,7 +47,6 @@ contract Tiny {
     Restrict withdrawls
     */
     function withdraw() external onlyBy {
-        require(msg.sender == owner_, "Sender not authorized.");
-        owner_.transfer(earning);
+        owner_.transfer(address(this).balance);
     }
 }
