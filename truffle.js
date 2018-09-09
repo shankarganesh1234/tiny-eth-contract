@@ -1,5 +1,5 @@
 // Allows us to use ES6 in our migrations and tests.
-require('babel-register')
+require('babel-register');
 
 module.exports = {
     networks: {
@@ -14,6 +14,14 @@ module.exports = {
             network_id: '*',
             gas: 470000,
             from: '0xD76500f49C1E24B6F07778c5Ab7c51059C9e0751'
+        },
+        live: {
+            host: 'localhost',
+            port: 8545,
+            network_id: '*',
+            gas: 335134,
+            gasPrice: 4,
+            from: '0x7125ead4c84651bd0657a2e61f6acfecd52d0f92'
         }
     }
 }
